@@ -24,7 +24,7 @@ We release a de-identified sample of 200 cases at `Datasets/CRID.json` for repro
 
 1. Overview of the dataset construction:
 
-    (/Assets/dataset.png)
+    ![Overview](/Assets/dataset.png)  
 
 2. Navigate to the `CRID_Construction` directory:
 
@@ -98,4 +98,4 @@ We release a de-identified sample of 200 cases at `Datasets/CRID.json` for repro
 ---
 
 ## 📜 License
-This repository is licensed under the Apache-2.0 License(https://github.com/eMoLii/CReaTe-LM/blob/main/LICENSE).
+This repository is licensed under the ![Apache-2.0 License](https://github.com/eMoLii/CReaTe-LM/blob/main/LICENSE).
