@@ -47,25 +47,27 @@ We release a de-identified sample of 200 cases at `Datasets/CRID.json` for repro
 
 ## 🧠 Model Training & Inference
 
-1. Navigate to the `Train` directory:
+1. We use Qwen3-8B as the base model. Please download it before training: (https://huggingface.co/Qwen/Qwen3-8B).
+
+2. Navigate to the `Train` directory:
 
     ```bash
     cd Code/Train
     ```
 
-2. Run `data2SFT.py` to convert the dialogue data into a format suitable for SFT training:
+3. Run `data2SFT.py` to convert the dialogue data into a format suitable for SFT training:
 
     ```bash
     python data2SFT.py
     ```
 
-3. Use llama-factory for effient SFT training. Please refer to its official guide (https://github.com/hiyouga/LLaMA-Factory). The config file is:
+4. Use llama-factory for effient SFT training. Please refer to its official guide (https://github.com/hiyouga/LLaMA-Factory). The config file is:
 
     ```
     SFT_args.yaml
     ```
 
-4. Use `llama-factory` for DPO training. The configuration file is:
+5. Use `llama-factory` for DPO training. The configuration file is:
 
     ```
     DPO_args.yaml
@@ -77,7 +79,13 @@ We release a de-identified sample of 200 cases at `Datasets/CRID.json` for repro
     Datasets/DPO_data.json
     ```
 
-5. For efficient inference, use vLLM. Please refer to the official vLLM documentation for setup and usage (https://github.com/vllm-project/vllm).
+6. We provide our fine-tuned lora adapter weights at:
+
+    ```
+    Model_Weights/adapter_model.safetensors
+    ```
+
+7. For efficient inference, use vLLM. Please refer to the official vLLM documentation for setup and usage (https://github.com/vllm-project/vllm).
 
 ---
 
